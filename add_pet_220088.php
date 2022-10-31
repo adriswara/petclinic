@@ -67,7 +67,7 @@
                     <input type="reset" name="reset" value="RESET">
                 </td>
             </tr>
-        </table>
+            <table>
     </form>
 </body>
 
