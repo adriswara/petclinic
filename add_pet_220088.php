@@ -10,11 +10,11 @@
 <body>
     <h1>Pet Clinic Adriswara</h1>
     <h3>Form Add Pet</h3>
-    <form action="post" action="">
+    <form action="post" action="create_pet_220088.php">
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="pet_name_220088"></td>
+                <td><input type="text" name="pet_name_220088" required></td>
             </tr>
             <tr>
                 <td> Type</td>
@@ -32,32 +32,32 @@
             <tr>
                 <td>Gender</td>
                 <td>
-                    <input type="radio" name="pet_gender_220088" value="Male">Male
-                    <input type="radio" name="pet_gender_220088" value="Female">Female
+                    <input type="radio" name="pet_gender_220088" value="Male" required>Male
+                    <input type="radio" name="pet_gender_220088" value="Female" required>Female
                 </td>
             </tr>
             <tr>
                 <td>Age</td>
                 <td>
-                    <input type="number" name="pet_age_220088">
+                    <input type="number" name="pet_age_220088" required>
                 </td>
             </tr>
             <tr>
                 <td>Owner</td>
                 <td>
-                    <input type="text" name="pet_owner_220088">
+                    <input type="text" name="pet_owner_220088" required>
                 </td>
             </tr>
             <tr>
                 <td>Address</td>
                 <td>
-                    <textarea name="pet_address_220088"></textarea>
+                    <textarea name="pet_address_220088" required></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Phone</td>
                 <td>
-                    <input type="text" name="pet_phone_220088">
+                    <input type="text" name="pet_phone_220088" required>
                 </td>
             </tr>
             <tr>
