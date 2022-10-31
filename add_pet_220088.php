@@ -10,7 +10,7 @@
 <body>
     <h1>Pet Clinic Adriswara</h1>
     <h3>Form Add Pet</h3>
-    <form action="post" action="create_pet_220088.php">
+    <form method="POST" action="create_pet_220088.php">
         <table>
             <tr>
                 <td>Name</td>
@@ -69,6 +69,7 @@
             </tr>
             <table>
     </form>
+    <p><a href="read_pet_220088.php">CANCEL</a></p>
 </body>
 
 </html>
