@@ -21,15 +21,26 @@
             <th>Address</th>
             <th>Phone</th>
         </tr>
+
+        <?php 
+        include "connection_220088.php";
+        $query = "SELECT * FROM pets_220088";
+        $pets = mysqli_query($db_connection,$query);
+        
+        $i = 1;
+        foreach ($pets as $data) :
+        ?>
+
         <tr>
-            <td></td>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <td><?php echo $i++; ?></td>
+            <th><?php echo $data['pet_name_220088']; ?></th>
+            <th><?php echo $data['pet_type_220088']; ?></th>
+            <th><?php echo $data['pet_age_220088']; ?></th>
+            <th><?php echo $data['pet_owner_220088']; ?></th>
+            <th><?php echo $data['pet_address_220088']; ?></th>
+            <th><?php echo $data['pet_phone_220088']; ?></th>
         </tr>
+        <?php endforeach ?>
     </table>
 </body>
 
