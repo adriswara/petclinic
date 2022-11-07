@@ -10,7 +10,7 @@
 <body>
     <h1>Pet Clinic Adriswara</h1>
     <h3>Pet List</h3>
-    <p><a href="add_pet_220088.php"> Add New Pet</a></p>
+    <p><a href="add_doctor_220088.php"> Add New Pet</a></p>
     <table border="1">
         <tr>
             <th>No</th>
@@ -19,7 +19,6 @@
             <th>Address</th>
             <th>Phone</th>
         </tr>
-
         <?php 
         include "connection_220088.php";
         $query = "SELECT * FROM doctor_220088";

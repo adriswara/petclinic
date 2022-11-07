@@ -20,6 +20,7 @@
             <th>Owner</th>
             <th>Address</th>
             <th>Phone</th>
+            <th colspan="2">Action</th>
         </tr>
 
         <?php 
@@ -33,12 +34,15 @@
 
         <tr>
             <td><?php echo $i++; ?></td>
-            <th><?php echo $data['pet_name_220088']; ?></th>
-            <th><?php echo $data['pet_type_220088']; ?></th>
-            <th><?php echo $data['pet_age_220088']; ?></th>
-            <th><?php echo $data['pet_owner_220088']; ?></th>
-            <th><?php echo $data['pet_address_220088']; ?></th>
-            <th><?php echo $data['pet_phone_220088']; ?></th>
+            <td><?php echo $data['pet_name_220088']; ?></td>
+            <td><?php echo $data['pet_type_220088']; ?></td>
+            <td><?php echo $data['pet_age_220088']; ?></td>
+            <td><?php echo $data['pet_owner_220088']; ?></td>
+            <td><?php echo $data['pet_address_220088']; ?></td>
+            <td><?php echo $data['pet_phone_220088']; ?></td>
+            <td><a href="edit_pet_220088.php?id=<?=$data['pet_id_220088']?>">Edit Pet</a></td>
+            <td><a href="delete_pet_220088.php?id=<?=$data['pet_id_220088']?>"
+                    onclick="return confirm('Are You sure?')">Delete Pet</a></td>
         </tr>
         <?php endforeach ?>
     </table>
