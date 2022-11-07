@@ -15,16 +15,14 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Type</th>
-            <th>Age(m)</th>
-            <th>Owner</th>
+            <th>Gemder</th>
             <th>Address</th>
             <th>Phone</th>
         </tr>
 
         <?php 
         include "connection_220088.php";
-        $query = "SELECT * FROM pets_220088";
+        $query = "SELECT * FROM doctor_220088";
         $pets = mysqli_query($db_connection,$query);
         
         $i = 1;
@@ -33,12 +31,10 @@
 
         <tr>
             <td><?php echo $i++; ?></td>
-            <th><?php echo $data['pet_name_220088']; ?></th>
-            <th><?php echo $data['pet_type_220088']; ?></th>
-            <th><?php echo $data['pet_age_220088']; ?></th>
-            <th><?php echo $data['pet_owner_220088']; ?></th>
-            <th><?php echo $data['pet_address_220088']; ?></th>
-            <th><?php echo $data['pet_phone_220088']; ?></th>
+            <th><?php echo $data['doctor_name_220088']; ?></th>
+            <th><?php echo $data['doctor_gender_220088']; ?></th>
+            <th><?php echo $data['doctor_address_220088']; ?></th>
+            <th><?php echo $data['doctor_phone_220088']; ?></th>
         </tr>
         <?php endforeach ?>
     </table>
