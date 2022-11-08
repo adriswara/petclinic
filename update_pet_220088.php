@@ -5,7 +5,7 @@ if (isset($_POST['save'])) {
 
 
 
-$query = "UPDATE  pets_220088 SET 
+$query = "UPDATE pets_220088 SET 
           pet_name_220088 = '$_POST[pet_name_220088]', 
           pet_type_220088 = '$_POST[pet_type_220088]', 
           pet_gender_220088 = '$_POST[pet_gender_220088]', 

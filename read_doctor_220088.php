@@ -9,8 +9,8 @@
 
 <body>
     <h1>Pet Clinic Adriswara</h1>
-    <h3>Pet List</h3>
-    <p><a href="add_doctor_220088.php"> Add New Pet</a></p>
+    <h3>Doctor List</h3>
+    <p><a href="add_doctor_220088.php"> Add New Doctor</a></p>
     <table border="1">
         <tr>
             <th>No</th>
@@ -18,14 +18,15 @@
             <th>Gemder</th>
             <th>Address</th>
             <th>Phone</th>
+            <th colspan="2">Action</th>
         </tr>
         <?php 
         include "connection_220088.php";
         $query = "SELECT * FROM doctor_220088";
-        $pets = mysqli_query($db_connection,$query);
+        $doctor = mysqli_query($db_connection,$query);
         
         $i = 1;
-        foreach ($pets as $data) :
+        foreach ($doctor as $data) :
         ?>
 
         <tr>
@@ -34,6 +35,9 @@
             <th><?php echo $data['doctor_gender_220088']; ?></th>
             <th><?php echo $data['doctor_address_220088']; ?></th>
             <th><?php echo $data['doctor_phone_220088']; ?></th>
+            <td><a href="edit_doctor_220088.php?id=<?=$data['doctor_id_220088']?>">Edit Doctor</a></td>
+            <td><a href="delete_doctor_220088.php?id=<?=$data['doctor_id_220088']?>"
+                    onclick="return confirm('Are You sure?')">Delete Doctor</a></td>
         </tr>
         <?php endforeach ?>
     </table>

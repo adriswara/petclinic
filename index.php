@@ -12,6 +12,8 @@
     <h3> Pet Clinic</h3>
     <p><a href="read_pet_220088.php">Pets List</a></p>
     <p><a href="read_doctor_220088.php">Doctor List</a></p>
+    <p><a href="read_user_220088.php">User List</a></p>
+    <p><a href="login.php">Login</a></p>
 
 
 </body>

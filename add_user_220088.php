@@ -9,32 +9,32 @@
 
 <body>
     <h1>Pet Clinic Adriswara</h1>
-    <h3>Form Add doctor</h3>
-    <form method="POST" action="create_doctor_220088.php">
+    <h3>Form Add user</h3>
+    <form method="POST" action="create_user_220088.php">
         <table>
             <tr>
-                <td>Name</td>
-                <td><input type="text" name="doctor_name_220088" required></td>
+                <td>Username</td>
+                <td><input type="text" name="username_220088" required></td>
             </tr>
             <tr>
-                <td>Gender</td>
-                <td>
-                    <input type="radio" name="doctor_gender_220088" value="Male" required>Male
-                    <input type="radio" name="doctor_gender_220088" value="Female" required>Female
-                </td>
+                <td>Password</td>
+                <td><input type="text" name="password_220088" required></td>
             </tr>
             <tr>
-                <td>Address</td>
+                <td>User Type</td>
                 <td>
-                    <textarea name="doctor_address_220088" required></textarea>
+                    <input type="radio" name="usertype_220088" value="Staff" required>Staff
+                    <input type="radio" name="usertype_220088" value="Manager" required>Manager
                 </td>
             </tr>
+
             <tr>
-                <td>Phone</td>
+                <td>Fullname</td>
                 <td>
-                    <input type="text" name="doctor_phone_220088" required>
+                    <textarea name="fullname_220088" required></textarea>
                 </td>
             </tr>
+
             <tr>
                 <td></td>
                 <td>
