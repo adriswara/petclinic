@@ -9,7 +9,7 @@
 
 <body>
     <h1>Pet Clinic Adriswara</h1>
-    <h3>Form Add Pet</h3>
+    <h3> Pet Clinic</h3>
     <p><a href="read_pet_220088.php">Pets List</a></p>
     <p><a href="read_doctor_220088.php">Doctor List</a></p>
 
