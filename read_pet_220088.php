@@ -34,7 +34,9 @@
 
         <tr>
             <td><?php echo $i++; ?></td>
-            <td><?php echo $data['pet_name_220088']; ?></td>
+            <td><a
+                    href="medicals_220088.php?pet_id=<?=$data['pet_id_220088']?>"><?php echo $data['pet_name_220088']; ?></a>
+            </td>
             <td><?php echo $data['pet_type_220088']; ?></td>
             <td><?php echo $data['pet_age_220088']; ?></td>
             <td><?php echo $data['pet_owner_220088']; ?></td>

@@ -10,7 +10,7 @@
 <body>
     <h1>Pet Clinic Adriswara</h1>
     <h3>Form edit user</h3>
-    <form action="post" action="update_user_220088.php">
+    <form method="post" action="update_user_220088.php">
         <?php 
    include "connection_220088.php";
    $querry = "SELECT * FROM users_220088 WHERE userid_220088='$_GET[id]'";

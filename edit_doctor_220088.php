@@ -47,7 +47,7 @@
             <tr>
                 <td>Phone</td>
                 <td>
-                    <input type="text" name="doctor_phone_220088" value="<?= $data['doctor_phone_220088']; ?>"" required>
+                    <input type="text" name="doctor_phone_220088" value="<?= $data['doctor_phone_220088']; ?>" required>
                 </td>
             </tr>
             <tr>
