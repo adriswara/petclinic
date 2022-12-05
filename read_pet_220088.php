@@ -17,6 +17,7 @@
             <th>Name</th>
             <th>Type</th>
             <th>Age(m)</th>
+            <th>Photo</th>
             <th>Owner</th>
             <th>Address</th>
             <th>Phone</th>
@@ -39,6 +40,11 @@
             </td>
             <td><?php echo $data['pet_type_220088']; ?></td>
             <td><?php echo $data['pet_age_220088']; ?></td>
+            <td align="center"><img src="uploads/pets/<?= $data['pet_photo_220088'];?>" width="50" height="50"
+                    alt=""><br>
+                <a href="pet_photo_220088.php?id=<?=$data['pet_id_220088']?>">Change Photo</a>
+            </td>
+
             <td><?php echo $data['pet_owner_220088']; ?></td>
             <td><?php echo $data['pet_address_220088']; ?></td>
             <td><?php echo $data['pet_phone_220088']; ?></td>

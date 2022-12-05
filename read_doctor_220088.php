@@ -18,6 +18,7 @@
             <th>Gemder</th>
             <th>Address</th>
             <th>Phone</th>
+            <th>Photo</th>
             <th colspan="2">Action</th>
         </tr>
         <?php 
@@ -35,6 +36,10 @@
             <th><?php echo $data['doctor_gender_220088']; ?></th>
             <th><?php echo $data['doctor_address_220088']; ?></th>
             <th><?php echo $data['doctor_phone_220088']; ?></th>
+            <td align="center"><img src="uploads/doctors/<?= $data['doctor_photo_220088'];?>" width="50" height="50"
+                    alt=""><br>
+                <a href="doctor_photo_220088.php?id=<?=$data['doctor_id_220088']?>">Change Photo</a>
+            </td>
             <td><a href="edit_doctor_220088.php?id=<?=$data['doctor_id_220088']?>">Edit Doctor</a></td>
             <td><a href="delete_doctor_220088.php?id=<?=$data['doctor_id_220088']?>"
                     onclick="return confirm('Are You sure?')">Delete Doctor</a></td>

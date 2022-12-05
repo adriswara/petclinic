@@ -8,40 +8,57 @@
 </head>
 
 <body>
-    <h1>Pet Clinic Adriswara</h1>
-    <h3>User List</h3>
-    <p><a href="add_user_220088.php"> Add New User</a></p>
-    <table border="1">
-        <tr>
-            <th>No</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Usertype</th>
-            <th>Fullname</th>
-            <th colspan="2">Action</th>
-        </tr>
-        <?php 
-        include "connection_220088.php";
-        $query = "SELECT * FROM users_220088";
-        $users = mysqli_query($db_connection,$query);
-        
-        $i = 1;
-        foreach ($users as $data) :
-        ?>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.php">home</a></li>
+                <li><a href="change_password_220088.php">change password</a></li>
+                <li><a href="logout.php">logout</a></li>
+            </ul>
+        </div>
+        <div class="med">
+            <h3>List User</h3>
+            <button class="action-btn"><a href="add_user_220088.php">Add New User</a></button>
+            <table border="1" cellspacing="0" cellpadding="4">
+                <tr class="theader">
+                    <th>No</th>
+                    <th>UserName</th>
+                    <!-- <th>Password</th> -->
+                    <th>UserType</th>
+                    <th>FullName</th>
+                    <th colspan="3">Action</th>
+                </tr>
+                <?php
+            //call connection
+            include "connection_220088.php";
+            //make a sql query
+            $query = "SELECT * FROM users_220088";
+            //run query
+            $pets = mysqli_query($db_connection, $query);
 
-        <tr>
-            <td><?php echo $i++; ?></td>
-            <th><?php echo $data['username_220088']; ?></th>
-            <th><?php echo $data['password_220088']; ?></th>
-            <th><?php echo $data['usertype_220088']; ?></th>
-            <th><?php echo $data['fullname_220088']; ?></th>
-            <td><a href="edit_user_220088.php?id=<?=$data['userid_220088']?>">Edit User</a></td>
-            <td><a href="delete_user_220088.php?id=<?=$data['userid_220088']?>"
-                    onclick="return confirm('Are You sure?')">Delete User</a></td>
-        </tr>
-        <?php endforeach ?>
-    </table>
-    <p><a href="index.php">Back to Home</a></p>
+            $i=1;
+            foreach ($pets as $data) :
+        ?>
+                <tr>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo $data['username_220088']; ?></td>
+                    <!-- <td><?php echo $data['password_220088']; ?></td> -->
+                    <td><?php echo $data['usertype_220088']; ?></td>
+                    <td><?php echo $data['fullname_220088']; ?></td>
+                    <td><button class="action-btn">
+                            <p><a href="edit_user_220088.php?id=<?=$data['userid_220088']?>">Edit User</a></p>
+                        </button></td>
+                    <td><button class="action-btn">
+                            <p><a href="delete_user_220088.php?id=<?=$data['userid_220088']?>"
+                                    onclick="return confirm('Are you sure?')">Delete User</a></p>
+                        </button></td>
+                    <td><button class="action-btn">
+                            <p><a href="reset_pw.php?id=<?=$data['userid_220088'];?>&type=<?=$data['usertype_220088'];?>"
+                                    onclick="return confirm('are you sure reset the password?')">Reset Password</a></p>
+                        </button></td>
+                </tr>
+                <?php endforeach; ?>
+
 </body>
 
 </html>

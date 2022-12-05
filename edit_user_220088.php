@@ -9,49 +9,50 @@
 
 <body>
     <h1>Pet Clinic Adriswara</h1>
-    <h3>Form edit user</h3>
-    <form method="post" action="update_user_220088.php">
-        <?php 
-   include "connection_220088.php";
-   $querry = "SELECT * FROM users_220088 WHERE userid_220088='$_GET[id]'";
-   $pet=mysqli_query($db_connection,$querry);
-   $data=mysqli_fetch_assoc($pet);  
+    <?php
+        include "connection_220088.php";
+        //make query dari id
+        $query="SELECT * FROM users_220088 WHERE userid_220088='$_GET[id]'";
+        //menjalankan query
+        $user= mysqli_query($db_connection,$query);
+        //extrak hasil query
+        $data=mysqli_fetch_assoc($user);
     ?>
-        <table>
-            <tr>
-                <td>Username</td>
-                <td><input type="text" name="username_220088" value="<?= $data['username_220088']; ?>" required></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="text" name="password_220088" value="<?= $data['password_220088']; ?>" required></td>
-            </tr>
-            <tr>
-                <td>User Type</td>
-                <td>
-                    <input type="radio" name="usertype_220088" value="Staff"
-                        <?= ($data['usertype_220088']=='Staff')?'checked':'';?> required>Staff
-                    <input type="radio" name="usertype_220088" value="Manager"
-                        <?= ($data['usertype_220088']=='Manager')?'checked':'';?> required>Manager
-                </td>
-            </tr>
-
-            <tr>
-                <td>Fullname</td>
-                <td>
-                    <textarea name="fullname_220088" required> <?= $data['fullname_220088']; ?> </textarea>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" name="save" value="SAVE">
-                    <input type="reset" name="reset" value="RESET">
-                </td>
-            </tr>
+    <div class="add">
+        <h3>Edit User Form</h3>
+        <form clacc="add-form" method="post" action="update_user_220088.php">
             <table>
-    </form>
+                <tr>
+                    <td class="add-td">UserName</td>
+                    <td><input type="text" name="username_220088" value="<?=$data['username_220088']?>" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-td">UserType</td>
+                    <td>
+                        <input type="radio" name="usertype_220088" value="Staff"
+                            <?=($data['usertype_220088']=='Staff')?'checked':'';?> required> Staff |
+                        <input type="radio" name="usertype_220088" value="Manager"
+                            <?=($data['usertype_220088']=='Manager')?'checked':'';?> required> Manager
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-td">FullName</td>
+                    <td><input type="text" name="fullname_220088" value="<?=$data['fullname_220088']?>" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="action-btn" type="submit" name="save">Save</button>
+                        <button class="action-btn" type="reset" name="reset">Reset</button>
+                        <button class="action-btn" type="cancel" name="cancel"><a
+                                href="read_user_220088.php">Cancel</a></button>
+                        <input type="hidden" name="userid_220088" value="<?=$data['userid_220088']?>">
+                    </td>
+                </tr>
+            </table>
+        </form>
 </body>
 
 </html>
