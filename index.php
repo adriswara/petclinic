@@ -30,6 +30,7 @@
                 <li><a href="home.php">home</a></li>
                 <li><a href="change_password_220088.php">change password</a></li>
                 <li><a href="logout_220088.php">logout</a></li>
+                <li><a href="report_220088.php">Monthly Report</a> </li>
             </ul>
         </div>
         <div class="profile-display">
