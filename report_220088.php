@@ -18,16 +18,18 @@
     ?>
     <form>
         <p>Select
-            <select name="month" id="" required>
+            <?php $dateTime ?>
+            <select name="month" required>
                 <option value="">Month</option>
                 <?php for($m=1;$m<=12;$m++){ ?>
-                <option value=""> <?=$months[$m-1]?> </option>
+                <?php $dateTime=$dateTime+1; ?>
+                <option value="<?= $m ?>"> <?=$months[$m-1]?> </option>
                 <?php } ?>
             </select>
-            <select name="year" id="">
+            <select name="year" required>
                 <option value="">Year</option>
                 <?php for($y=0;$y<=2;$y++){ ?>
-                <option value=""><?=$year-$y;?></option>
+                <option value="<?= $year-$y ?>"><?=$year-$y?></option>
                 <?php } ?>
             </select>
             <input type="submit" value="View Report">
@@ -37,13 +39,17 @@
     <?php 
     if (isset($_GET['year'])) { 
     include 'connection_220088.php';
+    $m =  $_GET['month'];
+    $y =  $_GET['year'];
     // $query = "SELECT * FROM medicals_220088";
     $query = "SELECT m.mr_date_220088, d.doctor_name_220088, p.pet_name_220088, p.pet_owner_220088, m.cost_220088 FROM medicals_220088 AS m,
     doctor_220088 AS d, pets_220088 AS p WHERE m.doctor_id_220088=d.doctor_id_220088 AND m.pet_id_220088=p.pet_id_220088 AND 
-    MONTH(m.mr_date_220088)='$_GET[month]' AND YEAR(m.mr_date_220088) = '$_GET[year]'";
+    MONTH(m.mr_date_220088)='$m' AND YEAR(m.mr_date_220088) = '$y'";
     $report=mysqli_query($db_connection,$query);
+   
+    
     ?>
-    <h4>Report Periode <?=$_GET['month']?> - <?= $_GET['year'] ?></h4>
+    <h4>Report Periode <?=$months[$_GET['month']-1]?> - <?= $_GET['year']?></h4>
     <table border="1">
         <tr>
             <th>No</th>
