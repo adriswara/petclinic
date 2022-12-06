@@ -31,6 +31,11 @@
                 <li><a href="change_password_220088.php">change password</a></li>
                 <li><a href="logout_220088.php">logout</a></li>
                 <li><a href="report_220088.php">Monthly Report</a> </li>
+                <li><a href="read_doctor_220088.php">doctor list</a></li>
+                <li><a href="read_pet_220088.php">pet list</a></li>
+                <?php if($_SESSION['usertype']=='Manager') { ?>
+                <li><a href="read_user_220088.php">User list</a></li>
+                <?php } ?>
             </ul>
         </div>
         <div class="profile-display">
@@ -49,29 +54,21 @@
             <div class="card-display">
                 <span class="inner-display">
                     <!-- <a href="read_pet_220088.php"><img src="img/pet-list.png" width="50px"></a> -->
-                    <a href="read_pet_220088.php">
-                        <h5 align="">pet list</h5>
-                    </a>
+
                 </span>
             </div>
             <div class="card-display">
                 <span class="inner-display">
                     <!-- <a href="read_doctors_220088.php"><img src="img/doctor-list.png" width="50px"></a> -->
-                    <a href="read_doctor_220088.php">
-                        <h5 align="">doctor list</h5>
-                    </a>
+
                 </span>
 
             </div>
-            <?php if($_SESSION['usertype']=='Manager') { ?>
-            <div class="card-display">
-                <span class="inner-display">
-                    <a href="read_user_220088.php"><img src="img/user-list.png" width="50px"></a>
-                </span>
-                <h5 align="">user list</h5>
-            </div>
-            <?php } ?>
+
+
         </div>
+
+    </div>
     </div>
     </div>
 </body>

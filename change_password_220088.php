@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="index.php">home</a></li>
                 <li><a href="change_password_220088.php">change password</a></li>
-                <li><a href="logout.php">logout</a></li>
+                <li><a href="logout_220088.php">logout</a></li>
             </ul>
         </div>
 

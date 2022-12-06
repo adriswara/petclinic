@@ -16,7 +16,7 @@ if (isset($_POST['upload'])) {
                 echo "<script> alert('Change photo succesed !'); window.location.replace('read_doctor_220088.php');</script>";
         }    
             else{
-                echo "<script>alert('Change photo failed ! ');window.locaion.replace('doctor_photo_220088.php?id=$_POST[doctor_id_220088]');</script>";
+                echo "<script>alert('Change photo failed ! ');window.location.replace('doctor_photo_220088.php?id=$_POST[doctor_id_220088]');</script>";
             }
         }
         else echo " <script>alert('upload photo failed !');window.location.replace('doctor_photo_220088.php?id=$_POST[doctor_id_220088]');</script>";

@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="index.php">home</a></li>
                 <li><a href="change_password_220088.php">change password</a></li>
-                <li><a href="logout.php">logout</a></li>
+                <li><a href="logout_220088.php">logout</a></li>
             </ul>
         </div>
         <div class="med">
@@ -45,6 +45,10 @@
                     <!-- <td><?php echo $data['password_220088']; ?></td> -->
                     <td><?php echo $data['usertype_220088']; ?></td>
                     <td><?php echo $data['fullname_220088']; ?></td>
+                    <td align="center"><img src="uploads/users/<?= $data['user_photo_220088'];?>" width="50" height="50"
+                            alt=""><br>
+                        <a href="user_photo_220088.php?id=<?=$data['userid_220088']?>">Change Photo</a>
+                    </td>
                     <td><button class="action-btn">
                             <p><a href="edit_user_220088.php?id=<?=$data['userid_220088']?>">Edit User</a></p>
                         </button></td>
@@ -53,7 +57,7 @@
                                     onclick="return confirm('Are you sure?')">Delete User</a></p>
                         </button></td>
                     <td><button class="action-btn">
-                            <p><a href="reset_pw.php?id=<?=$data['userid_220088'];?>&type=<?=$data['usertype_220088'];?>"
+                            <p><a href="reset_password_220088.php?id=<?=$data['userid_220088'];?>&type=<?=$data['usertype_220088'];?>"
                                     onclick="return confirm('are you sure reset the password?')">Reset Password</a></p>
                         </button></td>
                 </tr>
