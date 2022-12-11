@@ -12,14 +12,14 @@ if (isset($_POST['upload'])) {
         $upload = mysqli_query($db_connection,$query);
 
         if ($upload) {
-            if ($_POST['pet_photo_220088'] !== 'default.png') unlink($folder . $_POST['pet_photo_220088']);
+            if ($_POST['user_photo_220088'] !== 'default.png') unlink($folder . $_POST['user_photo_220088']);
                 echo "<script> alert('Change photo succesed !'); window.location.replace('index.php');</script>";
         }    
             else{
-                echo "<script>alert('Change photo failed ! ');window.locaion.replace('pet_photo_220088.php?id=$_POST[pet_id_220088]');</script>";
+                echo "<script>alert('Change photo failed ! ');window.locaion.replace('user_photo_220088.php?id=$_POST[userid_220088]');</script>";
             }
         }
-        else echo " <script>alert('upload photo failed !');window.location.replace('pet_photo_220088.php?id=$_POST[pet_id_220088]');</script>";
+        else echo " <script>alert('upload photo failed !');window.location.replace('user_photo_220088.php?id=$_POST[userid_220088]');</script>";
         
 }
 ?>

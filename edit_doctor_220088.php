@@ -51,9 +51,21 @@
                 </td>
             </tr>
             <tr>
+
+                <td></td>
+                <td> <img src="uploads/doctors/<?= $data['doctor_photo_220088']; ?>" width="100" height="100" alt="">
+                </td>
+
+            </tr>
+            <tr>
+                <td>Edit Photo</td>
+                <td>: <input type="file" name="new_photo_220088" values="<?= $data['doctor_photo_220088']; ?>"
+                        required /></td>
+            </tr>
+            <tr>
                 <td></td>
                 <td>
-                    <input type=" submit" name="save" value="SAVE">
+                    <input type="submit" name="save" value="SAVE">
                     <input type="reset" name="reset" value="RESET">
                 </td>
             </tr>
