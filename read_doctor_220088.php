@@ -38,7 +38,7 @@
             <th><?php echo $data['doctor_phone_220088']; ?></th>
             <td align="center"><img src="uploads/doctors/<?= $data['doctor_photo_220088'];?>" width="50" height="50"
                     alt=""><br>
-                <a href="doctor_photo_220088.php?id=<?=$data['doctor_id_220088']?>">Change Photo</a>
+                <!-- <a href="doctor_photo_220088.php?id= PHPP $data['doctor_id_220088'] PHPP ">Change Photo</a> -->
             </td>
             <td><a href="edit_doctor_220088.php?id=<?=$data['doctor_id_220088']?>">Edit Doctor</a></td>
             <td><a href="delete_doctor_220088.php?id=<?=$data['doctor_id_220088']?>"
