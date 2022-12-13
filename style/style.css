@@ -35,7 +35,6 @@ body {
   /* Create a right-aligned (split) link inside the navigation bar */
 .topnav a.split {
     float: right;
-    background-color: #776BCC;
     color: white;
 }
 

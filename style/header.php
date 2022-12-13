@@ -12,13 +12,57 @@
 
     <div class="topnav">
         <a href="http://localhost/petclinic/form_login_220088.php">Pet Clinic</a>
-        <a href="#about" class="split">Logout</a>
+        <?php 
+        if(isset($_SESSION)){
+         echo '<a href="logout_220088.php" class="split" style="background-color: #776BCC">Logout</a>';
+         echo '<a href="" class="split">' ;
+         echo '<h6>User : ',$_SESSION["fullname"],'</h6>';
+         echo '</a>';
+         echo '<a href="" class="split">';
+         echo '<h6>logged as ',$_SESSION["usertype"],'</h6>';
+         echo ' </a>'; 
+        }
+
+        ?>
+
+
+
+
+
+
+
     </div>
 
 
     <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <?php 
+        if(isset($_SESSION)){
+        include "connection_220088.php";
+        $query = "SELECT * FROM users_220088 WHERE fullname_220088='$_SESSION[fullname]'";
+        $user=mysqli_query($db_connection,$query);
+        $data=mysqli_fetch_assoc($user);
+        }
+        ?>
+        <?php if(isset($_SESSION)) { ?>
+        <a href="http://localhost/petclinic/index.php">Home</a>
+        <a href="report_220088.php">Monthly Report</a>
+        <a href="read_doctor_220088.php">doctor list</a>
+        <a href="read_pet_220088.php">pet list</a>
+        <?php if($_SESSION['usertype']=='Manager') { ?>
+        <a href="read_user_220088.php">User list</a>
+        <?php } ?>
+        <?php } ?>
+
+        <?php 
+
+
+        if(isset($_SESSION)){
+        echo '<a href="" class="split"> <img src="uploads/users/' . $data["user_photo_220088"] . '" width="50" height="50" alt=""><br> </a>';
+        echo '<a href="user_photo_220088.php?id=' . $data["userid_220088"] . '" class="split">Change Photo</a>';
+        echo '<a href="change_password_220088.php" class="split">change password</a>';
+        }
+        ?>
+
+
+
     </div>

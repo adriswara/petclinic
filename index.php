@@ -4,73 +4,61 @@
 	    echo "<script>alert('Please Login First !');window.location.replace('form_login_220088.php');</script>";
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
+<?php 
+include 'style\header.php';
+?>
 
-<head>
-    <title>Pet Clinic Adriswara</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="bg-img" style="background-image: url(img/pets.jpg);">
-
-    <?php 
+<?php 
          include "connection_220088.php";
          $query = "SELECT * FROM users_220088 WHERE fullname_220088='$_SESSION[fullname]'";
          $user=mysqli_query($db_connection,$query);
          $data=mysqli_fetch_assoc($user);
-    ?>
+?>
 
-    <div class="container">
+<div class="container">
+    <div class="screen">
+        <div class="screen__content">
 
-        <div class="navbar">
-            <ul>
-                <li><a href="home.php">home</a></li>
-                <li><a href="change_password_220088.php">change password</a></li>
-                <li><a href="logout_220088.php">logout</a></li>
-                <li><a href="report_220088.php">Monthly Report</a> </li>
-                <li><a href="read_doctor_220088.php">doctor list</a></li>
-                <li><a href="read_pet_220088.php">pet list</a></li>
-                <?php if($_SESSION['usertype']=='Manager') { ?>
-                <li><a href="read_user_220088.php">User list</a></li>
-                <?php } ?>
-            </ul>
-        </div>
-        <div class="profile-display">
-            <table>
-                <tr>
-                    <td class="">
-                        <h3>welcome <?=$_SESSION['fullname'];?>!</h3>
-                        <h5>you are login as <?=$_SESSION['usertype'];?></h5>
-                        <img src="uploads/users/<?= $data['user_photo_220088'];?>" width="50" height="50" alt=""><br>
-                        <a href="user_photo_220088.php?id=<?=$data['userid_220088']?>">Change Photo</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="card">
-            <div class="card-display">
-                <span class="inner-display">
-                    <!-- <a href="read_pet_220088.php"><img src="img/pet-list.png" width="50px"></a> -->
+            <h4>Pet Clinic Adriswara</h4>
+            <h4>Dashboard</h4>
 
-                </span>
-            </div>
-            <div class="card-display">
-                <span class="inner-display">
-                    <!-- <a href="read_doctors_220088.php"><img src="img/doctor-list.png" width="50px"></a> -->
+            <a href="report_220088.php"><button class="button login__submit">
+                    <span class="button__text"> Monthly Report</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button></a>
 
-                </span>
+            <a href="read_doctor_220088.php"><button class="button login__submit">
+                    <span class="button__text"> Doctor list</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button></a>
 
-            </div>
 
+            <a href="read_pet_220088.php"><button class="button login__submit">
+                    <span class="button__text"> Pet list</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button></a>
+
+            <?php if($_SESSION['usertype']=='Manager') { ?>
+            <a href="read_user_220088.php"><button class="button login__submit">
+                    <span class="button__text"> User List</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button></a>
+            <?php } ?>
 
         </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>
+    </div>
+</div>
 
-    </div>
-    </div>
-    </div>
+
+
+
 </body>
 
 </html>
