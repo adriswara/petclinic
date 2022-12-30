@@ -203,3 +203,7 @@ body {
 .social-login__icon:hover {
 	transform: scale(1.5);	
 }
+
+.w3-button {
+    width:150px;
+}

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Pet Clinic Adriswara</title>
 </head>
 
 <body>
 
     <div class="topnav">
-        <a href="http://localhost/petclinic/form_login_220088.php">Pet Clinic</a>
+        <a href="http://localhost/petclinic/index.php">Pet Clinic Adriswara</a>
         <?php 
         if(isset($_SESSION)){
          echo '<a href="logout_220088.php" class="split" style="background-color: #776BCC">Logout</a>';
